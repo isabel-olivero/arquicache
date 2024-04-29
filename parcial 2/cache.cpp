@@ -7,6 +7,8 @@
 
 using namespace std;
 
+/*la memoria principal si debe ser un mapa ya que es necesario relacionar dato con direccion*/
+
 /*opcion 1 implemenacion con clases  y mapas*/
 
 class Cache {
