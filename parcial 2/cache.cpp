@@ -27,8 +27,9 @@ class Cache {
 /*opcion 2 implemenacion con clases  y vectores */ 
 class Cache {
     private:
-        vector  <vector<string,string, string>> mem; /*bit de validez, adress, data*/
+        vector  <vector<string>> mem; /*bit de validez, adress, data*/
         int tamaño;
+        vector <pair<int, <vector<string>>> referencias;
     public:
     Cache(int tam){
         tamaño = tam;
@@ -37,9 +38,30 @@ class Cache {
             mem[i][0] = '0';
         }
     }
-    void LRU(string dato); /*en esta opcion seria reemplazar la primera posicion de la lista*/
-    string read();
-    void write();
+    void LRU(vector<string>dato){
+        int min= referencias[0][0];
+        pair <int,<vector<string>>> indice;
+
+        for (int i = 0; i < referencias.size(); ++i){
+            if referencias[i][0] < min{
+                min = referencias[i][0];
+                indice = referencias[i][1];
+            }
+        for (int j = 0; j < mem.size(); ++j) {
+            if indice == mem[i]{
+                mem[i][0]= '1'
+                mem[i][1]= dato[0];
+                mem[i][2] = dato[1];
+
+            }
+
+        }
+    } /*en esta opcion seria reemplazar la primera posicion de la lista*/
+    string read(string direccion){
+        for (int i = 0; i < mem.size(); ++i){
+            if direccion == 
+    }
+    void write(string dato, string direccion){}
 
 }
 
